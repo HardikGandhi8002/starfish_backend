@@ -1,0 +1,10 @@
+,column_name_django,column_name_inuit,column_desc_inuit
+0,col1,tx_date,Date
+1,col2,account_key,Account ID
+2,col3,txn_type,Transaction Type
+3,col4,doc_num,Num
+4,col5,name,Name
+5,col6,memo,Memo/Description
+6,col7,split_acc,Split
+7,col8,subt_nat_amount,Amount
+8,col9,rbal_nat_amount,Balance

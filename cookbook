@@ -1,0 +1,37 @@
+sudo yum install httpd
+python3 -m venv virtualenv
+source virtualenv/bin/activate
+pip3 install -r requirement.txt
+
+sudo cp mydjangoapp.conf /etc/httpd/conf.d/
+sudo nano /etc/httpd/conf.d/mydjangoapp.conf
+
+## install the wsgi module and pythondev
+sudo yum search python3-devel
+sudo yum install python3-devel-x.x.x.
+
+sudo yum search httpd-devel
+sudo yum install httpd-devel-x.x.x.
+
+sudo yum search mod_ssl
+sudo yum install mod_ssl-x.x.x.
+
+tar -xvf mod_wsgi-4.9.4.tar.gz 
+cd mod_wsgi-4.9.4.tar.gz
+./configure
+sudo make install
+
+sudo find . -type d -exec chmod 755 {} \;
+sudo find . -type f -exec chmod 644 {} \;
+
+postgres
+https://linux.how2shout.com/how-to-install-postgresql-15-amazon-linux-2023/
+https://ubuntu.com/server/docs/databases-postgresql
+
+
+sudo yum install -y cronie
+sudo systemctl status crond
+
+sudo chmod +x job.sh
+
+sudo chmod -R 777 media/
